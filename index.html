@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exam Room</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <form class="loginbox" action="index.html" method="post">
+            <h1>Enter Your Credentials</h1>
+            <input id = "username" type ="text" name="" placeholder="username">
+            <input id = "password" type ="password" name="" placeholder="password">
+            <span id="errormsg" class="errormsg" > username password does not match</span>
+            <input id = "loginbutton" type="submit" name="" value="Login">
+            <input id = "registerbutton" type="submit" name="" value="Register">
+        </form>
+        <script type="module" src = "src/socket.js"></script>
+        <script type="module" src = "src/register.js"></script>
+        <script type="module" src = "src/login.js"></script>
+
+    </body>
+</html>
