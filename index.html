@@ -3,18 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>Exam Room</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
-        <form class="loginbox" action="index.html" method="post">
-            <h1>Enter Your Credentials</h1>
-            <input id = "username" type ="text" name="" placeholder="username">
-            <input id = "password" type ="password" name="" placeholder="password">
-            <span id="errormsg" class="errormsg" > username password does not match</span>
-            <input id = "loginbutton" type="submit" name="" value="Login">
-            <input id = "registerbutton" type="submit" name="" value="Register">
-        </form>
+        <div class="lobby">
+            <form id = "loginbox" class="loginbox">
+                <input class = "inputtext" id = "username" type ="text" name="" placeholder="username">
+                <input class = "inputtext" id = "password" type ="password" name="" placeholder="password">
+                <span id = "login_errormsg" class="errormsg" > username password does not match</span>
+                <input class = "btn" id = "loginbutton" type="submit" name="" value="Login">
+                <p class="toggle-msg">New to Examroom? <button id = "goto_register">create an account</button></p>
+            </form>
+            <form id = "regbox" class="regbox">
+                <input class = "inputtext" id = "reg_username" type ="text" name="" placeholder="name">
+                <input class = "inputtext" id = "reg_userid" type ="text" name="" placeholder="userid">
+                <input class = "inputtext" id = "reg_password" type ="password" name="" placeholder="password">
+                <span id="reg_errormsg" class="errormsg" > username already exists</span>
+                <input class = "btn" id = "registerbutton" type="submit" name="" value="Create An Account">
+                <p class="toggle-msg">Already Registered? <button id = "goto_login">login</button></p>
+            </form>
+        </div>
+        <script type="module" src = "src/lobby.js"></script>
         <script type="module" src = "src/socket.js"></script>
         <script type="module" src = "src/register.js"></script>
         <script type="module" src = "src/login.js"></script>
